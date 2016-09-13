@@ -1,0 +1,25 @@
+name       : ruby-maruku
+version    : 0.7.2
+release    : 1
+source     :
+    - https://rubygems.org/downloads/maruku-0.7.2.gem : e8a755d8e9c24f1601157c8b376f0378f88d487fa777aa655f332504557a0798
+license    : MIT
+component  : programming
+summary    : A pure-Ruby Markdown-superset interpreter
+description: |
+    A pure-Ruby Markdown-superset interpreter
+extract    : no
+builddeps  :
+    - pkgconfig(ruby-2.2)
+rundeps    :
+    - ruby
+install    : |
+    export geminstalldir=$(ruby -e'puts Gem.default_dir')
+    export GEM_HOME=$geminstalldir
+    export GEM_PATH=$geminstalldir
+    gem install \
+        --ignore-dependencies \
+        --no-user-install \
+        -i "$installdir/$geminstalldir" \
+        -n "$installdir/usr/bin" \
+        $sources/maruku-$version.gem
