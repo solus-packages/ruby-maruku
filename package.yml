@@ -1,6 +1,6 @@
 name       : ruby-maruku
 version    : 0.7.3
-release    : 4
+release    : 5
 source     :
     - https://rubygems.org/downloads/maruku-0.7.3.gem : dd14156f57b5433993710adca63b766d18b36f6e35cb25c21b178a6edfedebe4
 license    : MIT
